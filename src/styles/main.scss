@@ -1,0 +1,498 @@
+@import "reset";
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+$blue: #002b52;
+$lightblue: #def5fb;
+
+$tabl1: 550px;
+$tabl2: 640px;
+
+$desk1: 320px; //1280
+$desk2: 1440px;
+$desk3: 1620px;
+$desk4: 1920px;
+
+
+html {
+  font-size: 62.5%; 
+  //@include breakpoint($tabl1) {
+  //  font-size: 40%; 
+  //}
+  @include breakpoint($desk1) {
+    font-size: 62.5%; 
+  }
+  @include breakpoint($desk3) {
+    font-size: 80%; 
+  }
+
+}
+html {
+
+  min-width: 1280px;
+}
+body {
+  font-family: Tahoma, Geneva, sans-serif;
+  min-width: $desk1;
+}
+h3 {
+  color: $blue;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.2em;
+  margin-bottom: 0.3em;
+  @include breakpoint($desk1) {
+    font-size: 4rem;
+
+  }
+}
+p {
+  font-size: 2rem;
+  line-height: 1.5em;
+  margin-bottom: 2rem;
+  color: $blue;
+}
+
+.content-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  @include breakpoint($desk3) {
+    max-width: 88%;
+  }
+}
+
+
+.site-header {
+  position: relative;
+  padding: 20px 20px 16px 15px;
+  background: #002241;
+} 
+h1 {
+  color: white;
+  font-family: Tahoma;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 2.08em;
+  @include breakpoint($desk1) {
+    font-size: 24px;
+  }
+  @include breakpoint($desk3) {
+    font-size: 32px;
+  }
+}
+.site-header__logos {
+  float: left;
+  margin: 0;
+  img {
+    height: 40px;
+  }
+  @include breakpoint($desk1) {
+    img {
+      height: 50px;
+    }
+  }
+  @include breakpoint($desk3) {
+    img { height: 66px; }
+  } 
+}
+.site-header__logos--inmarsat {
+  margin-right: 7px;
+}
+.site-header__logos--telekom {
+  margin-right: 18px;
+  @include breakpoint($desk1) {
+    margin-right: 58px;
+  }
+}
+
+
+.site-header__nav {
+  position: absolute;
+  right: 0px;
+  top: 7px;
+  @include breakpoint($desk1) {
+    top: 0px;
+
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      &:first-child {
+        display: none;
+        @include breakpoint($desk1) {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+.button {
+  height: 3rem;
+  line-height: 3rem;
+  padding-right: 10px;
+
+  display: inline-block;
+  font-size: 1.8rem;
+  color: #fff;
+  background-color: $blue;
+  text-decoration: none;
+  @include breakpoint($desk1) {
+    height: 4.5rem;
+    line-height: 4.5rem;
+    padding-right: 20px;
+  }
+
+  .icon {
+    display: inline-block;
+    vertical-align: sub;
+    max-height: 15px;
+    margin-left: 10px;
+    margin-right: 5px;
+    @include breakpoint($desk1) {
+      max-height: none;
+      margin-left: 17px;
+      margin-right: 7px;
+    }
+  }
+}
+.button__inverted {
+  color: $blue;
+  background: white;
+}
+.button__big {
+  height: 6rem;
+  line-height: 6rem;
+  font-size: 2rem;
+}
+.button--contact {
+  margin-right: 18px;
+  .icon {
+    width: 28px;
+    height: 20px;
+  }
+}
+.button--pdf {
+  .icon {
+    vertical-align: middle;
+    width: 30px;
+    height: 36px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: -5px;
+  }
+}
+
+
+
+
+
+.big-and-centered {
+  text-align: center;
+  width: 100%;
+  max-width: 73%;
+  margin-left: auto;
+  margin-right: auto;
+  @include breakpoint($desk1) {
+    max-width: 73%;
+
+  }
+}
+
+
+
+
+
+
+.ean-benefits {
+  position: relative;
+  background-image: linear-gradient(0deg,#fff 38%,#46c8ff 60%,#027bc2 80%,#003152 91%,#002241);
+  padding-top: 4.86vw;
+  //margin-bottom: -520px;
+  margin-bottom: -11vw;
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: -10%;
+    width: 120%;
+    height: 100%;
+    background: transparent url('../img/benefits-earth.png') center bottom no-repeat;
+    background-size: 100% auto;
+    @include breakpoint($desk1) {
+      right: 0;
+      width: 100%;
+
+    }
+  }
+}
+
+.ean-benefits,
+.benefits__commercially-attractive {
+
+  text-align: center;
+  p {
+    width: 100%;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    @include breakpoint($desk1) {
+      max-width: 54%;
+
+    }
+  }
+}
+
+.ean-benefits__stars {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  height: 392px;
+  background: transparent url('../img/stars.png') center top repeat;
+}
+.ean-benefits__intro {
+  color: #fff;
+  h2 {
+    font-size: 4.0rem;
+    font-weight: 800;
+    margin-bottom: 0.31em;
+  }
+  h3 {
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1.3em;
+    margin-bottom: 0.625em;
+  }
+  p {
+    color: #fff;
+  }
+}
+.ean-benefits__plane {
+  //position: absolute;
+  position: relative;
+  z-index: 4;
+  margin-top: -16%;
+  margin-bottom: -45%;
+  pointer-events: none;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  @include breakpoint($desk1) {
+    margin-bottom: -45%;
+  }
+}
+
+.ean-benefits__earth {
+  position: relative;
+  width: 100%;
+  height: 44%;
+
+}
+
+.benefits-copy {
+  z-index: 3;
+  margin-bottom: 3.25vw;
+  @include breakpoint($desk1) {
+    margin-bottom: 6.25vw;
+  }
+}
+.benefits-copy__scalable {
+  //margin-bottom: 400px;
+  margin-top: 10%;
+  height: 46vw;
+  h3 {
+    padding-top: 0;
+  }
+  @include breakpoint($desk1) {
+    min-height: 470px;
+    height: 37vw;
+  }
+}
+.benefits__commercially-attractive {
+  //min-height: 550px;
+  //height: 43vw;
+  margin-bottom: 9rem;
+  padding-bottom: 200px;
+  background: transparent url('../img/benefits-charts.svg') center bottom no-repeat;
+  background-size: 100% auto;
+  @include breakpoint(1280px) {
+    padding-bottom: 13vw;
+
+  }
+
+}
+
+
+
+.passengers__intro {
+  font-size: 2rem;
+  line-height: 1.5em;
+  @include breakpoint($desk1) {
+    font-size: 3rem;
+
+  }
+}
+
+
+.passenger-stats__featured--stats {
+  display: inline-block;
+  width: 33%;
+  margin-right: 4%;
+  img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.passenger-stats__featured {
+  //TODO
+  max-width: 73%;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #AAAAAA;
+  margin-bottom: 30px;
+}
+.passenger-stats__subtext {
+  color: $blue;
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 2.3rem;
+  width: 100%;
+  text-align: center;
+}
+.passenger-stats__featured--description {
+  display: inline-block;
+  vertical-align: top;
+  width: 62%;
+  p {
+    width: 100%;
+    max-width: none;
+    color: black;
+    font-size: 2rem;
+    line-height: 1.4em;
+    text-align: left;
+    background: $lightblue;
+    padding: 25px 35px 35px 35px;
+  }
+}
+.passenger-stats__grid {
+  display: flex;
+  justify-content: space-between;
+  max-width: 73%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  margin: 0 auto;
+  margin-bottom: 28px
+}
+.passenger-stats__grid--border {
+  border-bottom: 1px solid #AAAAAA;
+}
+.stat-wrapper {
+  width: 26.8%;
+  img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.passenger-stats__footnote {
+  text-align: center;
+  max-width: 54%;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 9rem;
+  .footnote {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+  .button {
+    margin-top: 2.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+.contact-cta {
+  text-align: center;
+  background: $lightblue;
+  padding: 50px 0 68px 0;
+  p {
+    font-size: 4rem;
+    line-height: 4.8rem;
+    margin-bottom: 2.5rem;
+  }
+}
+.contact-info {
+  background: $blue;
+  color: white;
+  padding-top: 8rem;
+}
+.contact-info__meta {
+  max-width: 73%;
+  margin: 0 auto;
+}
+.contact-info__meta-links {
+  display: flex;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: 1px solid white;
+  li {
+    flex: 1;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-align: center;
+    &:first-child {
+      text-align: left;
+    }
+    &:last-child {
+      text-align: right;
+    }
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover, &:active { text-decoration: underline; }
+  }
+}
+
+.contact-info__details {
+  max-width: 73%;
+  margin: 0 auto;
+  margin-bottom: 8rem;
+  display: flex;
+}
+.contact-info__logos,
+.contact-info__inmarsat,
+.contact-info__telekom {
+  width: 33%;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  strong { font-size: 2rem; line-height: 2.4rem; font-weight: 800; }
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover, &:active {
+      text-decoration: underline;
+    }
+  }
+}
+.contact-info__logos {
+  img {
+    height: 61px;
+  }
+}
+
+

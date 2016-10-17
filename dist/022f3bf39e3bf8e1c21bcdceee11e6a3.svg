@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="29px" height="36px" viewBox="0 0 29 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon PDF</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="European_Aviation_Network" transform="translate(-567.000000, -4513.000000)">
+            <g id="Survey-results" transform="translate(134.000000, 2801.000000)">
+                <g id="Button-view-indepth-market-research" transform="translate(421.000000, 1700.000000)">
+                    <g id="Icon-PDF" transform="translate(12.000000, 12.000000)">
+                        <g id="PDF">
+                            <polygon id="Icon-PDF" fill="#FFFFFF" points="28.9893245 0 0 0 0 36 24.3225806 36 29 31.2631579"></polygon>
+                            <text font-family="Tahoma-Bold, Tahoma" font-size="11" font-weight="bold" letter-spacing="-0.458333343" fill="#002B52">
+                                <tspan x="3.98798573" y="21.1315789">PDF</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
