@@ -2,38 +2,76 @@
 
 var path = require('path');
 var webpack = require('webpack');
+var CleanPlugin = require('clean-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+
+var production = process.env.NODE_ENV === 'production';
+
+
+
+var plugins = [
+  new HtmlWebpackPlugin({
+    template: 'src/layout.tpl.html',
+    inject: 'body',
+    filename: 'index.html'
+  }),
+  new webpack.optimize.CommonsChunkPlugin({
+    name:      'main', 
+    children:  true,
+    minChunks: 2,
+  }),
+  new webpack.HotModuleReplacementPlugin(),
+  new webpack.NoErrorsPlugin(),
+  new CopyWebpackPlugin([
+    { from: 'src/static' }
+  ]),
+]
+
+
+if (production) {
+  plugins = plugins.concat([
+    new CleanPlugin('dist'),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.MinChunkSizePlugin({
+      minChunkSize: 51200, // ~50kb
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      mangle:   true,
+      compress: {
+        warnings: false, 
+      },
+    }),
+    new webpack.DefinePlugin({
+      __SERVER__:      !production,
+      __DEVELOPMENT__: !production,
+      __DEVTOOLS__:    !production,
+      'process.env':   {
+        BABEL_ENV: JSON.stringify(process.env.NODE_ENV),
+      },
+    }),
+  ]);
+}
 
 module.exports = {
+  debug:   !production,
+  devtool: production ? false : 'eval',
   entry: './src',
   output: {
     path: path.join(__dirname, '/dist/'),
     filename: '[name].js',
-    publicPath: '/'
+    publicPath: '/',
+    libraryTarget: 'umd'
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'src/index.tpl.html',
-      inject: 'body',
-      filename: 'index.html'
-    }),
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development')
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    })
-
-  ],
+  devServer: {
+    outputPath: path.join(__dirname, 'dist')
+  },
+  plugins: plugins,
   module: {
     loaders: [
       {
-        test: /\.js/,
+        test: /\.jsx?$/,
         loader: 'babel',
         include: __dirname + '/src'
       },
@@ -42,12 +80,13 @@ module.exports = {
         loader: 'json'
       },
       {
-        test:   /\.(png|gif|jpe?g|svg)$/i,
-        loader: 'file',
-      },
-      {
         test: /\.html$/,
         loader: 'html-loader'
+      },
+      {
+        test:   /\.(png|gif|jpe?g|svg)$/i,
+        loader: 'file',
+        include: __dirname + '/src/img'
       },
       {
         test:   /\.scss/,
