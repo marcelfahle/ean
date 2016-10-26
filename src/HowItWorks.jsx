@@ -11,67 +11,82 @@ export default class HowItWorks extends React.Component {
     return(
     
       <main>
-        <article className="howitworks-intro">
 
-        </article>
-
-        <article className="howitworks-components">
+        <article id="elements-of-ean" className="howitworks-components">
           <section className="howitworks-components__intro">
-            <h3>
-              Components of EAN
+            <h3 className="howitworks-components__intro--title">
+              Powering Europe’s aviation connectivity
             </h3>
-            <p>
-              The European Aviation Network consists of two main compontents, the MSS satellite component from Inmarsat which covers Europe and the surrounding oceanic regions and the complementary ground component of Deutsche Telekom which provides the required capacity in areas with extensive air traffic.
+            <p className="howitworks-components__intro--intro" >
+              The European Aviation Network (EAN) seamlessly combines S-band satellites and a complementary 4G LTE mobile terrestrial network – the first of its kind worldwide.
+            </p>
+
+            <h4 className="howitworks-components__intro--subtitle">
+              Components of EAN
+            </h4>
+            <p className="howitworks-components__intro--copy">
+              EAN consists of two main components, the MSS satellite component from Inmarsat which covers Europe and the surrounding oceanic regions, and the complementary ground component of Deutsche Telekom, which provides the required capacity in areas with extensive air traffic.
             </p>
           </section>
 
           <section className="howitworks-components__annotations">
-            <div className="howitworks-components__annotations--inmarsat">
-              <ol>
-                <li>
-                  Description geostationary satellite, Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
-                </li>
-                <li>
-                  Description satellite terminal, Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed diam.
-                </li>
-                <li>
-                  The ground station that will serve as a gateway towards the satellite and connects the feeder links to the core network.
-                </li>
-                <li>
-                  All traffic streams are aggregated in the MeetMe Point in NL.
-                </li>
-              </ol>
+            <div className="annotations-row">
+              <div className="howitworks-components__annotations--satellite">
+                <h4>MSS satellite component</h4>
+                <ol>
+                  <li>
+                    The satellite access station serves as a gateway towards the satellite and connects the feeder links to the core network.
+                  </li>
+                  <li>
+                    Inmarsat S-band satellite, a state-of the-art and custom-designed platform provides multi-beam pan-European coverage.
+                  </li>
+                  <li>
+                    Satellite terminal installed in the aircraft that communicates with the satellite.
+                  </li>
+                </ol>
+              </div>
+              <div className="howitworks-components__annotations--ground">
+                <h4>Complementary ground component</h4>
+                <ol>
+                  <li>
+                    The CGC terminal system on board of the aircraft that communicates with the terrestrial base stations.
+                  </li>
+                  <li>
+                    Terrestrial base stations located throughout Europe.
+                  </li>
+                  <li>
+                    Evolved Packet Core (Core Network), the place where all the LTE traffic is converged.
+                  </li>
+                </ol>
+              </div>
             </div>
-            <div className="howitworks-components__annotations--telekom">
-              <ol>
-                <li>
-                  Radio Access Network or terrestrial base stations in locations throughout Europe.
-                </li>
-                <li>
-                  Evolved Packet Core or Core Network, the place where all the LTE traffic is converged.
-                </li>
-                <li>
-                  The CGC terminal system on board an aircraft that communicates with the terrestrial base stations.
-                </li>
-                <li>  
-                  The ISP Platform can be T-Mobile Hot Spot GmbH or third-party ISP. In addition the ISP Platform of Deutsche Telekom enables authentification, authorisation and accounting of the internet service and its users. 
-                </li>
-              </ol>
+
+            <div className="annotations-row">
             
+              <div className="howitworks-components__annotations--meetme">
+                <h4>Meet-Me-Point</h4>
+                <ol>
+                  <li>
+                    The Inmarsat Meet-Me-Point aggregates all traffic streams, routes it to the ISP, to airline data centres or wherever required. It also contains the traffic shaping and the reporting functions.
+                  </li>
+                </ol>
+              </div>
+              <div className="howitworks-components__annotations--meetme howitworks-components__annotations--meetme2">
+                <h4>&nbsp;</h4>
+                <ol>
+                  <li>
+                    The ISP Platform of Deutsche Telekom enables authentication, authorisation and accounting of the internet service and its users.
+                  </li>
+                </ol>
+              </div>
             </div>
 
           </section>
 
-          <p className="howitworks-components__techpaper">
-            <a className="button button__big button--pdf" href="#">
-              <img src="./img/icon-pdf.svg" className="icon" alt="View indepth market research" />
-              View technical paper
-            </a>
-          </p>
          
         </article>
 
-        <article className="howitworks-aircraft-components">
+        <article id="ean-aircraft-components" className="howitworks-aircraft-components">
 
           <section className="howitworks-aircraft-components__benefits">
             <p className="hac-benefits__intro">
@@ -89,7 +104,7 @@ export default class HowItWorks extends React.Component {
               <div className="hac-benefits__item">
                 <img src="./img/hac-benefits2.png" alt="Fits on all regional airframes." />
                 <p>
-                  Fits on all regional airframes.
+                  Quick turn repairs minimize opportunity costs (aircraft back in service more quickly).
                 </p>
               </div>
               {/* 3 */}
@@ -106,43 +121,21 @@ export default class HowItWorks extends React.Component {
               <div className="hac-benefits__item">
                 <img src="./img/hac-benefits4.png" alt="Quick turn repairs minimize opportunity costs (aircraft back in service more quickly)." />
                 <p>
-                  Quick turn repairs minimize opportunity costs (aircraft back in service more quickly).
+                  Less downtime improves customer perception and experience.
                 </p>
               </div>
               {/* 5 */}
               <div className="hac-benefits__item">
                 <img src="./img/hac-benefits5.png" alt="High availability requires fewer LRUs to support, EAN LRUs are smaller and lighter vs. Satcom solutions." />
                 <p>
-                  High availability requires fewer LRUs to support, EAN LRUs are smaller and lighter vs. Satcom solutions.
+                  High availability requires fewer LRUs to support.
                 </p>
               </div>
               {/* 6 */}
               <div className="hac-benefits__item">
                 <img src="./img/hac-benefits6.png" alt="LRUs are smaller, lighter and easier to access, fewer personnel, less equipment and less time required vs. Satcom solutions." />
                 <p>
-                  LRUs are smaller, lighter and easier to access, fewer personnel, less equipment and less time required vs. Satcom solutions.
-                </p>
-              </div>
-            </div>
-            {/* ROW 3 */}
-            <div className="hac-benefits__row">
-              {/* 7 */}
-              <div className="hac-benefits__item">
-                <img src="./img/hac-benefits7.png" alt="Less downtime improves customer perception and experience." />
-                <p>
-                  Less downtime improves customer perception and experience.
-                </p>
-              </div>
-              {/* 8 */}
-              <div className="hac-benefits__item">
-                <img src="./img/hac-benefits8.png" alt="In addition, airlines can utilise the benefits of high-speed broadband to improve the operational efficiency of their aircraft." />
-                <p>
-                  In addition, airlines can utilise the benefits of high-speed broadband to improve the operational efficiency of their aircraft.
-                </p>
-              </div>
-              {/* 9 */}
-              <div className="hac-benefits__item">
-                <p>
+                  Fits on all regional airframes.
                 </p>
               </div>
             </div>
@@ -150,6 +143,16 @@ export default class HowItWorks extends React.Component {
 
         </article>
 
+
+        <article id="coverage-map" className="howitworks-coverage">
+          <h3>
+            EAN Coverage Map
+          </h3>
+          <p>
+            Placeholder, Cell coverage will be optimised with varying cell sizes up to a 150km radius depending on capacity needs per area. Flexibility to provide a wider MSS coverage.
+          </p>
+
+        </article>
 
 
       </main>

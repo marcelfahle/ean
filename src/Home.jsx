@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import { render } from 'react-dom';
 
 
@@ -19,20 +20,20 @@ export default class Benefits extends React.Component {
               The European Aviation Network
             </h2>
             <p className="home-intro__intro">
-              EAN is the World’s first integrated satellite and complementary LTE-based ground network that will bring unprecedented passenger connectivity to Europe’s aviation industry. 
+              The European Aviation Network (EAN) is the world’s first integrated satellite and complementary LTE-based ground network that will bring unprecedented passenger connectivity to Europe’s aviation industry.
               <br/><br/>
-              The new, innovative, and combined LTE-based terrestrial and satellite network of Inmarsat and Deutsche Telekom provides travelers in Europe with the advantage of in-flight, high-speed Internet access while airlines benefit from a cost-efficient, scalable connectivity solution.
+              The new, innovative, and combined LTE-based terrestrial and satellite network of Deutsche Telekom and Inmarsat provides travellers in Europe with the advantage of in-flight, high-speed Internet access while airlines benefit from a cost-efficient, scalable connectivity solution.
             </p>
             <p className="home-intro__actions">
 
-              <a className="button button__big button--video" href="#">
+              <a className="button button__big button--video" href="https://www.youtube.com/watch?v=uxUk9u_Ewws" target="_blank">
                 <img className="icon" src="./img/icon-video-play.svg" alt="Watch video" />
                 Watch video 
               </a>
 
-              <a className="button button__big button--none" href="/benefits">
+              <Link className="button button__big button--none" to="/how-it-works">
                 Get details to the network
-              </a>
+              </Link>
               
             </p>
           
@@ -43,45 +44,45 @@ export default class Benefits extends React.Component {
 
         <article className="home-teaser-grid">
           <div className="home-teaser-grid__wrapper">
-            <div className="home-teaser home-teaser--feature">
-              <img src="./img/home-teaser-apex.png" alt="26. September 2016 - Visit us at apex EXPO 2016 in Singapore, October 24-27, 2016" />
+            <Link className="home-teaser home-teaser" to="/newsroom/apex-expo">
+              <img src="./img/news-1610.png" alt="Meet us at APEX Expo 2016" />
               <p className="home-teaser__lower-third">
                 <span className="date">
-                  26. September 2016 
+                  October 24 - 27, 2016
                 </span>
-                Visit us at apex EXPO 2016 in Singapore, October 24-27, 2016
+                Meet us at APEX Expo 2016
               </p>
-            </div>
-            <div className="home-teaser">
-              <p className="home-teaser__full-link">
-                Scalable to meet<br/> growing demand
+            </Link>
+            <Link className="home-teaser home-teaser--feature" to="/newsroom/european-aviation-network-installation-of-the-first-lte-antennas-in-the-uk">
+              <img src="./img/news-1609.png" alt="EAN – Installation of the first LTE antennas in the UK" />
+              <p className="home-teaser__lower-third">
+                <span className="date">
+                  September 22, 2016
+                </span>
+                EAN – Installation of the first LTE antennas in the UK
               </p>
-            </div>
+            </Link>
           </div>
           <div className="home-teaser-grid__wrapper">
-            <div className="home-teaser">
+            <Link className="home-teaser" to="/benefits#scalable">
+              <p className="home-teaser__full-link">
+                Scalable to meet <br/>growing demand
+              </p>
+            </Link>
+            <Link className="home-teaser home-teaser" to="/newsroom/satellite-constructed-on-schedule-for-inmarsats-ground-breaking-european-aviation-network">
+              <img src="./img/news-1607.png" alt="Satellite constructed on schedule for Inmarsat’s ‘ground-breaking’ EAN" />
+              <p className="home-teaser__lower-third">
+                <span className="date">
+                  July 12, 2016
+                </span>
+                Satellite constructed on schedule for Inmarsat’s ‘ground-breaking’ EAN
+              </p>
+            </Link>
+            <Link className="home-teaser" to="/benefits#low-total-cost">
               <p className="home-teaser__full-link">
                 Low total cost<br/> of operation
               </p>
-            </div>
-            <div className="home-teaser">
-              <img src="./img/home-teaser-news2.png" alt="15 September 2016 - Inmarsat announces sponsorship for safety H.E.R.O" />
-              <p className="home-teaser__lower-third">
-                <span className="date">
-                  15 September 2016
-                </span>
-                Inmarsat announces sponsorship for safety H.E.R.O
-              </p>
-            </div>
-            <div className="home-teaser">
-              <img src="./img/home-teaser-news3.png" alt="14 September 2016 - Inmarsat and MCN sign agreement to provide aviation safety services" />
-              <p className="home-teaser__lower-third">
-                <span className="date">
-                  14 September 2016
-                </span>
-                Inmarsat and MCN sign agreement to provide aviation safety services
-              </p>
-            </div>
+            </Link>
 
           </div>
           <div className="home-teaser-grid__read-more">
@@ -89,9 +90,9 @@ export default class Benefits extends React.Component {
               For further information about the European Aviation Network
             </p>
             <p>
-              <a className="button button__big button--none" href="#">
+              <Link className="button button__big button--none" to="/newsroom">
                 Visit our newsroom
-              </a>
+              </Link>
             </p>
           </div>
 

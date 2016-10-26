@@ -16,7 +16,7 @@ export default class Footer extends React.Component {
             We look forward to hearing from you!
           </p>
             
-          <a className="button button__big button--pdf" href="#">
+          <a className="button button__big button--pdf" href="mailto:GlobalTechnicalSupport@inmarsat.com">
             <img className="icon" src="./img/icon-contact-us.svg" alt="Contact Us" />
             Contact Us
           </a>
@@ -54,10 +54,10 @@ export default class Footer extends React.Component {
           
           <div className="contact-info__meta">
             <ul className="contact-info__meta-links">
-              <li><a href="#">Copyright</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="http://www.inmarsat.com/">inmarsat.com</a></li>
+              <li>© Inmarsat plc. & Deutsche Telekom AG</li>
+              <li><a href="http://www.inmarsat.com/terms-and-conditions/" target="_blank">Terms & Conditions</a></li>
+              <li><a href="http://www.inmarsat.com/privacy-policy/" target="_blank">Privacy</a></li>
+              <li><a href="http://www.inmarsat.com/aviation/aviation-connectivity-services/european-aviation-network/">inmarsat.com</a></li>
               <li><a href="http://www.telekom.com/">telekom.com</a></li>
             </ul>
           </div>

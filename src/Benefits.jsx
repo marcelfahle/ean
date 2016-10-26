@@ -15,7 +15,7 @@ export default class Benefits extends React.Component {
           <div className="ean-benefits__stars"></div>
           
 
-          <section className="content-wrapper ean-benefits__intro">
+          <section id="benefits-of-ean" className="content-wrapper ean-benefits__intro">
             <h2>
               Benefits of the<br/>
               European Aviation Network
@@ -23,7 +23,7 @@ export default class Benefits extends React.Component {
             <h3>World-leading innovation</h3>
 
             <p>
-              Developed in a partnership of leading innovators in mobile connectivity and aviation, EAN is the first integrated LTE / satellite connectivity network of its kind worldwide that combines an advanced S-band satellite service with a complimentary ground-to-air network to provide high-capacity coverage across Europe.
+              Developed in a partnership of leading innovators in mobile connectivity and aviation, the European Aviation Network (EAN) is the first integrated LTE / satellite connectivity network of its kind worldwide that combines an advanced S-band satellite service with a complimentary ground-to-air network to provide high-capacity coverage across Europe.
             </p>
           </section>
 
@@ -34,7 +34,7 @@ export default class Benefits extends React.Component {
           <section className="content-wrapper benefits-copy ">
             <h3>Superior passenger experience</h3>
             <p>
-              EAN will transform European air travellers in-flight experience. It meets passenger demand for true in-flight broadband with quality of service that is consistent both in the air and on the ground, letting travellers enjoy messaging , social media and high-bandwidth applications like email, web browsing, video streaming, and VPN access while they fly.
+              EAN will transform European air travellers’ in-flight experience. <br/>It meets passenger demand for true in-flight broadband with quality of service that is consistent both in the air and on the ground, letting travellers enjoy messaging, social media and high-bandwidth applications like email, web browsing, video streaming, and VPN access while they fly.
             </p>
           </section>
 
@@ -45,7 +45,7 @@ export default class Benefits extends React.Component {
             </p>
           </section>
 
-          <section className="content-wrapper benefits-copy benefits-copy__scalable">
+          <section id="scalable" className="content-wrapper benefits-copy benefits-copy__scalable">
             <h3>Scalable solution to meet growing demand</h3>
             <p>
               EAN has a uniquely scalable architecture to match growing demand and increase network capacity quickly and affordably in response to traffic growth, more aircraft, route changes and evolving passenger behaviour.
@@ -58,13 +58,13 @@ export default class Benefits extends React.Component {
         <article className="benefits__commercially-attractive">
 
 
-          <section className="content-wrapper benefits-copy">
+          <section id="low-total-cost" className="content-wrapper benefits-copy">
             <h3>Low total cost of operation</h3>
             <p>
               Unlocking new direct and indirect ancillary revenue streams, like e-commerce, advertising, sponsorship and paid IFE, EAN drives competitive advantage and passenger loyalty with new standards of service.
             </p>
             <p>
-              It offers low capex, opex, installation and maintenance with lightweight, low-drag, highly reliable equipment, all at a TCO up to 3.5x lower than satellite only solutions – a demand-driven, future proof solution with fast extension and no significant costs.
+              It offers low capex, opex, installation and maintenance with lightweight, low-drag, highly reliable equipment -  a demand-driven, future proof solution with fast extension and no significant costs.
             </p>
           
           </section>
@@ -73,14 +73,14 @@ export default class Benefits extends React.Component {
         </article>
 
 
-        <article className="benefits__passengers">
+        <article id="meeting-passenger-demands" className="benefits__passengers">
           <section className="benefits-copy benefits-copy--featured big-and-centered">
             <h3>
               Meeting the demands of passengers, <br/>now and in the future
 
             </h3>
             <p className="featured passengers__intro">
-              Worldwide travellers now expect to stay connected via their smart devices and laptops when they are in the sky. Inflight connectivity has become a key differentiator in airline choice.
+              Worldwide travellers now expect to stay connected via their smart devices and laptops when they are in the sky. In-flight connectivity has become a key differentiator in airline choice.
             </p>
           </section>  
 
