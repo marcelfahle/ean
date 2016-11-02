@@ -27,10 +27,10 @@ body {
 .site-wrap {
   padding-top: 94px;
   @include breakpoint($tabl3) {
-    padding-top: 65px;
+    padding-top: 56px;
   }
   @include breakpoint( $tabl5 ) {
-    padding-top: 80px;
+    padding-top: 72px;
   }
   @include breakpoint( $desk1 ) {
     padding-top: 96px;

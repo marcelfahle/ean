@@ -22,10 +22,12 @@
   height: auto;
   margin-bottom: 2rem;
   &.innovation__intro--header-desk { display: none; }
-  @include breakpoint( $desk1 ) {
-    margin-bottom: 5rem;
+  @include breakpoint( $tabl2 ) {
     &.innovation__intro--header-mobile{ display: none; }
     &.innovation__intro--header-desk { display: block; }
+  }
+  @include breakpoint( $desk1 ) {
+    margin-bottom: 5rem;
   }
 }
 .innovation__title {
