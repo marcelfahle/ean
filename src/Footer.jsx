@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './styles/Footer.scss';
+
 
 export default class Footer extends React.Component {
   constructor( props ) {
@@ -16,7 +18,7 @@ export default class Footer extends React.Component {
             We look forward to hearing from you!
           </p>
             
-          <a className="button button__big button--pdf" href="mailto:GlobalTechnicalSupport@inmarsat.com">
+          <a className="button button__big button--pdf" href="mailto:EANSalesSupport@inmarsat.com">
             <img className="icon" src="./img/icon-contact-us.svg" alt="Contact Us" />
             Contact Us
           </a>
@@ -37,7 +39,7 @@ export default class Footer extends React.Component {
               Tel.: +44 (0)207 728 1492<br/>
               E-Mail: <a href="mailto:media@inmarsat.com">media@inmarsat.com</a><br/>
               <br/>
-              <a href="http://www.inmarsat.com/">inmarsat.com</a>
+              <a href="http://www.inmarsat.com/">www.inmarsat.com</a>
             </div>
             
             <div className="contact-info__telekom">
@@ -54,11 +56,11 @@ export default class Footer extends React.Component {
           
           <div className="contact-info__meta">
             <ul className="contact-info__meta-links">
-              <li>© Inmarsat plc. & Deutsche Telekom AG</li>
               <li><a href="http://www.inmarsat.com/terms-and-conditions/" target="_blank">Terms & Conditions</a></li>
               <li><a href="http://www.inmarsat.com/privacy-policy/" target="_blank">Privacy</a></li>
               <li><a href="http://www.inmarsat.com/aviation/aviation-connectivity-services/european-aviation-network/">inmarsat.com</a></li>
               <li><a href="http://www.telekom.com/">telekom.com</a></li>
+              <li className="contact-info__meta-links--copyright">© Inmarsat plc. & Deutsche Telekom AG</li>
             </ul>
           </div>
         </section>

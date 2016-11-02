@@ -1,0 +1,120 @@
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+$copycolor: #000;
+$blue: #002b52;
+$lightblue: #def5fb;
+$lightblue-text: #18b4ce;
+
+$mob1: 360px;
+$mob2: 420px;
+$mob3: 480px;
+
+$tabl1: 550px;
+$tabl2: 640px;
+$tabl3: 720px;
+$tabl3b: 780px;
+$tabl4: 840px;
+$tabl4b: 900px;
+$tabl5: 960px;
+
+$desk0: 1080px;
+$desk1: 1120px; //1280
+$desk1b: 1280px;
+$desk1c: 1320px;
+$desk2: 1440px;
+$desk2b: 1520px;
+$desk3: 1620px;
+$desk3b: 1820px;
+$desk4: 1920px;
+$desk5: 2020px;
+$desk8: 2560px;
+
+
+@mixin h1 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+
+  
+  @include breakpoint( $tabl2 ) {
+    font-size: 2.8rem;
+  }
+  @include breakpoint( $tabl5 ) {
+    font-size: 3.2rem;
+  }
+  @include breakpoint( $desk1 ) {
+    font-size: 4.2rem;
+  }
+  @include breakpoint( $desk1b ) {
+    font-size: 4.6rem;
+  }
+}
+
+@mixin h2 {
+  color: $blue;
+  font-size: 2.6rem;
+  line-height: 1.2;
+  font-weight: 800;
+  @include breakpoint( $tabl2 ) {
+    font-size: 3rem;
+  }
+  @include breakpoint( $desk1 ) {
+    font-size: 3.4rem;
+    font-weight: 800;
+  }
+  @include breakpoint( $desk1b ) {
+    font-size: 4rem;
+    font-weight: 800;
+  }
+
+}
+@mixin h3 {
+  color: $blue;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 1em;
+
+  @include breakpoint( $tabl2 ) {
+    font-size: 2.6rem;
+    margin-bottom: 0.6em;
+  }
+
+  @include breakpoint( $desk1 ) {
+    font-size: 3.4rem;
+  }
+  @include breakpoint( $desk1b ) {
+    font-size: 4rem;
+  }
+
+}
+@mixin copy {
+  color: $copycolor;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  @include breakpoint( $tabl1 ) {
+    font-size: 1.8rem;
+  }
+  @include breakpoint( $desk1b ) {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+}
+
+.show-desk {
+  display: none;
+}
+
+
+
+$h1desk: 4rem;
+$h1lh: 1.2;
+$h2desk: 18px;
+$copydesk: 3rem;
+$copylh: 1.333;
+
+
+$h1mob: 24px;
+$h2mob: 18px;
+$copymob: 14px;
+

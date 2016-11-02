@@ -3362,6 +3362,10 @@ react-scroll:
   dependencies:
     object-assign "^4.0.1"
 
+react-skylight:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/react-skylight/-/react-skylight-0.4.1.tgz#07d1af6dea0a50a5d8122a786a8ce8bc6bdf2241"
+
 read-pkg-up@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-1.0.1.tgz#9d63c13276c065918d57f002a57f40a1b643fb02"

@@ -1,6 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 
+import './styles/Benefits.scss';
+
 
 export default class Benefits extends React.Component {
   constructor( props ) {
@@ -28,7 +30,8 @@ export default class Benefits extends React.Component {
           </section>
 
           <div className="ean-benefits__plane">
-            <img src="./img/benefits-plane.png" alt=""/>
+            <img src="./img/benefits-plane.png" className="show-desk" alt=""/>
+            <img src="./img/benefits-plane-mobile.png" className="show-mobile" alt=""/>
           </div>
 
           <section className="content-wrapper benefits-copy ">
@@ -75,7 +78,7 @@ export default class Benefits extends React.Component {
 
         <article id="meeting-passenger-demands" className="benefits__passengers">
           <section className="benefits-copy benefits-copy--featured big-and-centered">
-            <h3>
+            <h3 className="benefits__passengers--title">
               Meeting the demands of passengers, <br/>now and in the future
 
             </h3>
@@ -103,7 +106,7 @@ export default class Benefits extends React.Component {
               </div>
             </div>
 
-            <div className="passenger-stats__grid">
+            <div className="passenger-stats__grid passenger-stats__grid--border">
 
               <div className="stat-wrapper">
                 <img src="./img/stat1p83.png" alt="83% choose an airline based on broadband availability" />
@@ -117,8 +120,6 @@ export default class Benefits extends React.Component {
                 <img src="./img/stat3p54.png" alt="54% would choose staying online over in-flight meals" />
                 <p className="passenger-stats__subtext">would choose staying online over in-flight meals</p>
               </div>
-            </div>
-            <div className="passenger-stats__grid passenger-stats__grid--border">
               <div className="stat-wrapper">
                 <img src="./img/stat4p34.png" alt="34% bring 3 devices on Board" />
                 <p className="passenger-stats__subtext">bring 3 devices on Board</p>

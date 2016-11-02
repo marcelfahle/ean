@@ -1,0 +1,77 @@
+@import '~breakpoint-sass/stylesheets/breakpoint';
+@import '_variables';
+
+.article {
+  width: 62.5%;
+  margin: 0 auto;
+  padding-top: 6.6rem;
+  padding-bottom: 6.6rem;
+
+}
+.article p, .article li {
+  font-size: 2rem;
+  line-height: 1.5;
+  color: black;
+  margin-bottom: 1.5em;
+  a:link, a:visited {
+    color: $lightblue-text;
+    text-decoration: none;
+  }
+  a:hover, a:active {
+    text-decoration: underline;
+  }
+  strong {
+    font-weight: 800;
+  }
+
+}
+
+figure {
+  padding-top: 10px;
+  padding-bottom: 3rem;
+  img {
+    width: 83%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+figcaption {
+  width: 83%;
+  display: block;
+  color: black;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  line-height: 1.62em;
+}
+.article .article__date {
+  color: $lightblue-text;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.article__title {
+  font-size: 4rem;
+  line-height: 1.333;
+  font-weight: 800;
+  margin: 0;
+  margin-bottom: 10px;
+}
+p.article__intro {
+  //color: $blue;
+  color: $copycolor;
+  font-size: 3rem;
+  line-height: 1.333;
+  margin-bottom: 0.9em;
+}
+.article h3 {
+  font-size: 3rem;
+  line-height: 1.333;
+  padding-top: 1em;
+}
+.article ul {
+
+}
+.article ul li {
+  padding-left: 32px;
+  background: transparent url('../img/menu-item-bullet.png') top left no-repeat;
+  background-size: .9em 1.35em;
+}

@@ -4,6 +4,8 @@ import { render } from 'react-dom';
 import { Match, Miss, Link } from 'react-router';
 import Router from 'react-router/BrowserRouter'
 
+import './styles/main.scss';
+
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import Home from './Home.jsx';
@@ -20,6 +22,7 @@ import Article5 from './Article5.jsx';
 import Article6 from './Article6.jsx';
 import Article7 from './Article7.jsx';
 import Article8 from './Article8.jsx';
+import Article2016Oct from './Article2016Oct.jsx';
 
 import classNames from 'classnames';
 
@@ -28,7 +31,6 @@ import TransitionGroup from 'react-addons-transition-group';
 import Page from './Page';
 
 
-import './styles/main.scss';
 
 var loc = false;
 
@@ -98,7 +100,14 @@ export default class App extends React.Component {
   }
 
   setHeaderStickiness( sticky ) {
-    isSticky = sticky;
+    if (sticky !== isSticky) {
+      isSticky = sticky;
+      const wrap = document.getElementsByClassName('site-wrap')[0];
+      wrap.classList.toggle( 'sticky' );
+      console.log('ok, action', wrap.classList);
+
+    }
+
   }
 
   render() {
@@ -120,7 +129,7 @@ export default class App extends React.Component {
             isMenu={ this.state.isMenu } 
             />
 
-          <CustomMatch exactly pattern="/" component={ Home }/>
+          <CustomMatch exactly pattern="/" component={ Benefits }/>
           <CustomMatch pattern="/benefits" component={ Benefits } />
           <CustomMatch pattern="/how-it-works" component={HowItWorks} />
           <CustomMatch pattern="/innovation-and-partnership" component={ Innovation } />
@@ -134,6 +143,7 @@ export default class App extends React.Component {
           <CustomMatch pattern="/newsroom/new-satellite-access-station-for-european-aviation-network-in-greece" component={ Article6 } />
           <CustomMatch pattern="/newsroom/european-aviation-network-terminal-manufacturer-selected" component={ Article7 } />
           <CustomMatch pattern="/newsroom/deutsche-telekom-and-inmarsat-partner-to-deliver-european-aviation-network" component={ Article8 } />
+          <CustomMatch pattern="/newsroom/meet-us-at-the-wireless-global-congress-2016" component={ Article2016Oct } />
 
           <Footer />
 

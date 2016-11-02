@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/Article.scss';
 
 export default class Article2 extends React.Component {
   constructor( props ) {

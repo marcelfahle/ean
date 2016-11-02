@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { render } from 'react-dom';
+import SkyLight from 'react-skylight';
+
+import './styles/Home.scss';
 
 
 export default class Benefits extends React.Component {
@@ -8,7 +11,21 @@ export default class Benefits extends React.Component {
     super( props );
   }
 
+  openVideo(ref, e) {
+    e.preventDefault();
+    ref.show();
+  }
+
   render() {
+    var videoDialogStyles = {
+      backgroundColor: '#000000',
+      color: '#ffffff',
+      width: '800px',
+      height: '434px',
+      textAlign: 'center',
+      marginLeft: '-400px',
+      marginTop: '-217px',
+    }
     return(
     
       <main>
@@ -26,13 +43,16 @@ export default class Benefits extends React.Component {
             </p>
             <p className="home-intro__actions">
 
-              <a className="button button__big button--video" href="https://www.youtube.com/watch?v=uxUk9u_Ewws" target="_blank">
+              <a className="button button__big button--video" 
+                href="#"
+                onClick={(e) => this.openVideo(this.refs.vid, e)}
+              >
                 <img className="icon" src="./img/icon-video-play.svg" alt="Watch video" />
                 Watch video 
               </a>
 
               <Link className="button button__big button--none" to="/how-it-works">
-                Get details to the network
+                Get details of the network
               </Link>
               
             </p>
@@ -44,13 +64,13 @@ export default class Benefits extends React.Component {
 
         <article className="home-teaser-grid">
           <div className="home-teaser-grid__wrapper">
-            <Link className="home-teaser home-teaser" to="/newsroom/apex-expo">
-              <img src="./img/news-1610.png" alt="Meet us at APEX Expo 2016" />
+            <Link className="home-teaser home-teaser" to="/newsroom/meet-us-at-the-wireless-global-congress-2016">
+              <img src="./img/news-1610-2.jpg" alt="Meet us at the Wireless Global Congress in San Jose, USA." />
               <p className="home-teaser__lower-third">
                 <span className="date">
-                  October 24 - 27, 2016
+                  November 14-17, 2016
                 </span>
-                Meet us at APEX Expo 2016
+                Meet us at the Wireless Global Congress in San Jose, USA.
               </p>
             </Link>
             <Link className="home-teaser home-teaser--feature" to="/newsroom/european-aviation-network-installation-of-the-first-lte-antennas-in-the-uk">
@@ -97,6 +117,13 @@ export default class Benefits extends React.Component {
           </div>
 
         </article>
+
+        <SkyLight 
+          hideOnOverlayClicked 
+          dialogStyles={videoDialogStyles} 
+          ref="vid">
+          <iframe width="768" height="432" src="https://www.youtube.com/embed/uxUk9u_Ewws" frameBorder="0" allowFullScreen></iframe>
+        </SkyLight>
 
 
       </main>

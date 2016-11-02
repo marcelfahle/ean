@@ -3,6 +3,9 @@ import Link from 'react-router/Link'
 import classNames from 'classnames';
 
 
+import './styles/Header.scss';
+
+
 export default class Header extends React.Component {
   constructor( props ) {
     super( props );
@@ -120,13 +123,13 @@ export default class Header extends React.Component {
             </Link>
           </p>
           
-          <h1><Link to="/">European Aviation Network</Link></h1>
+          <h1 className="site-title"><Link to="/">European Aviation Network</Link></h1>
           
           <nav className="site-header__nav">
             <ul>
               <li>
-                <a href="mailto:GlobalTechnicalSupport@inmarsat.com" 
-                  className="button button__inverted button--contact">
+                <a href="mailto:EANSalesSupport@inmarsat.com" 
+                  className="button button__inverted button--contact site-header__nav--button">
                   <img src="./img/icon-contact-us-blue.svg" className="icon" alt="Contact Us" />  
                   Contact Us
                 </a>
@@ -134,7 +137,7 @@ export default class Header extends React.Component {
               <li>
                 <a href="#" 
                   onClick={ this.toggleMenu }
-                  className="button button__inverted button--menu">
+                  className="button button__inverted button--menu site-header__nav--button">
                   <img src="./img/icon-menu-blue.svg" className="icon" alt="Menu" />  
                   Menu
                 </a>

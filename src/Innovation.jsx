@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router';
 import ReadmoreParagraph from './ReadmoreParagraph.jsx';
 
+import './styles/Innovation.scss';
+
 export default class Innovation extends React.Component {
   constructor( props ) {
     super ( props );
@@ -83,7 +85,7 @@ export default class Innovation extends React.Component {
                 <div className="more-partners__copy">
                   <h4>Designing and producing an advanced Mobile Satellite Services (MSS) terminal for EAN</h4>
                   <p>
-                    Cobham SATCOM is designing and producing an advanced Mobile Satellite Services (MSS) terminal for EAN. The compact, lightweight and cost effective terminal will exploit the latest advances in Broadband Global Area Network (BGAN) technology to enable a direct connection between aircraft and Inmarsat’s S-band satellite. Cobham SATCOM is also responsible for updating the Inmarsat BGAN ground infrastructure to accommodate S-band operation. 
+                    Cobham SATCOM is designing and producing an advanced Mobile Satellite Services (MSS) terminal for EAN. The compact, lightweight and cost effective terminal will exploit the latest advances in Broadband Global Area Network (BGAN) technology to enable a direct connection between aircraft and Inmarsat’s S-band satellite. Cobham SATCOM is also responsible for updating the Inmarsat BGAN ground infrastructure to accommodate S-band operation as part of its agreement with Inmarsat.
                     <br/><br/>
                     <a href="http://www.cobham.com" target="_blank">www.cobham.com</a>
                   </p>
@@ -131,9 +133,7 @@ export default class Innovation extends React.Component {
                 <div className="more-partners__copy">
                   <h4>Building EAN’s S-band satellite and manufacturing a Complementary Ground Component (CGC) terminal</h4>
                   <p>
-                    Thales Alenia Space is building EAN's S-band satellite, a state-of the-art platform, to provide multi-beam pan-European coverage. The satellite is custom-designed to offer innovative Mobile Satellite Services (MSS) to commercial and business airlines flying over the dense European routes, exploiting Inmarsat’s 30MHz (2 x 15MHz) S-band spectrum allocation in all 28 EU member states.
-                    <br/><br/>
-                    In addition, Thales is developing and manufacturing a Complementary Ground Component (CGC) terminal for EAN which will be fitted onto aircraft to provide a crucial link with the LTE-based ground network.
+                    Thales Alenia Space is building EAN's S-band satellite, a state-of the-art platform, to provide multi-beam pan-European coverage. The satellite is custom-designed to offer innovative mobile satellite services (MSS) to commercial and business airlines flying over the dense European routes, exploiting Inmarsat’s 30MHz (2 x 15MHz) S-band spectrum allocation in all 28 EU member states.
                     <br/><br/>
                     <a href="http://www.thalesgroup.com" target="_blank">www.thalesgroup.com</a>
                   </p>

@@ -1,6 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 
+import './styles/HowItWorks.scss';
+
 
 export default class HowItWorks extends React.Component {
   constructor( props ) {
@@ -145,12 +147,11 @@ export default class HowItWorks extends React.Component {
 
 
         <article id="coverage-map" className="howitworks-coverage">
-          <h3>
-            EAN Coverage Map
-          </h3>
-          <p>
-            Placeholder, Cell coverage will be optimised with varying cell sizes up to a 150km radius depending on capacity needs per area. Flexibility to provide a wider MSS coverage.
-          </p>
+          <div className="howitworks-coverage__content">
+            <h3>
+              EAN Coverage Map
+            </h3>
+          </div>
 
         </article>
 

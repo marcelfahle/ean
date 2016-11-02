@@ -1,0 +1,367 @@
+@import '~breakpoint-sass/stylesheets/breakpoint';
+@import '_variables';
+
+// EAN
+
+
+.ean-benefits {
+  position: relative;
+
+  background-image: linear-gradient(0deg, #fff 0%, #46c8ff 60%, #027bc2 80%, #003152 91%, #002b52);
+  padding-top: 4.86vw;
+  /* margin-bottom: 23vw; */
+  padding-bottom: 5rem;
+  margin-bottom: 1rem;
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    top: 0;
+    //right: -10%;
+    //width: 120%;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    background: transparent url('../img/benefits-earth-mobile.png') center bottom no-repeat;
+    background-size: 100% auto;
+    @include breakpoint( $tabl1 ) {
+      background: transparent url('../img/benefits-earth-no-tower.png') center bottom no-repeat;
+      background-size: 100% auto;
+      right: 0;
+      width: 100%;
+    }
+    @include breakpoint( $tabl3 ) {
+      background: transparent url('../img/benefits-earth.png') center bottom no-repeat;
+      background-size: 100% auto;
+    }
+  }
+  @include breakpoint( $desk1 ) {
+    //background-image: linear-gradient(0deg,#fff 38%,#46c8ff 60%,#027bc2 80%,#003152 91%,$blue);
+    padding-top: 4.86vw;
+    //margin-bottom: -520px;
+    margin-bottom: -4vw;
+  }
+}
+
+
+
+
+
+
+// COMMON TEXT
+.ean-benefits,
+.benefits__commercially-attractive {
+  text-align: center;
+  p {
+    width: calc(100% - 20px);
+    margin-left: auto;
+    margin-right: auto;
+    @include breakpoint( $tabl4 ) {
+      max-width: 70%;
+    }
+    @include breakpoint($desk1) {
+      //max-width: 51%;
+      max-width: 65%;
+    }
+    @include breakpoint($desk1b) {
+      //max-width: 51%;
+      max-width: 54%;
+    }
+  }
+}
+
+.ean-benefits__stars {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  height: 392px;
+  background: transparent url('../img/stars.png') center top repeat;
+}
+.ean-benefits__intro {
+  color: #fff;
+  h2 {
+    @include h2;
+    color: #fff;
+    margin-bottom: 1.67em;
+  }
+  h3 {
+    @include h3;
+    color: #fff;
+    margin-bottom: 0.625em;
+  }
+  p {
+    @include copy;
+    color: #fff;
+    @include breakpoint( $tabl3 ) {
+      max-width: 65%;
+    }
+    @include breakpoint($desk1b) {
+      //max-width: 51%;
+      max-width: 54%;
+    }
+
+  }
+}
+.ean-benefits__plane {
+  //position: absolute;
+  position: relative;
+  z-index: 4;
+  pointer-events: none;
+  img.show-desk { display: none; }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  @include breakpoint( $tabl3 ) {
+    img.show-desk { display: inline-block; }
+    img.show-mobile { display: none; }
+    margin-top: -13vw;
+  }
+  @include breakpoint( $tabl3b ) {
+  }
+  @include breakpoint( $tabl5 ) {
+  }
+  @include breakpoint( $desk1 ) {
+  }
+}
+
+.ean-benefits__earth {
+  position: relative;
+  width: 100%;
+  height: 44%;
+
+}
+
+.benefits-copy {
+  z-index: 3;
+  margin-bottom: 4em;
+  p {
+    color: $copycolor;
+    @include copy;
+  }
+  @include breakpoint($desk1) {
+    //margin-bottom: 6.25vw;
+    margin-bottom: 4.25vw;
+  }
+}
+.ean-benefits .benefits-copy {
+  @include breakpoint( $tabl3 ) {
+    max-width: 65%;
+  }
+  @include breakpoint( $tabl4 ) {
+    max-width: none;
+  }
+
+}
+
+
+.benefits-copy--featured h3 {
+  font-weight: 800;
+}
+
+
+
+
+// SCALABLE - EARTH AND STUFF
+.benefits-copy__scalable {
+  //margin-bottom: 400px;
+  margin-top: 20vw;
+  //height: 46vw;
+  h3 {
+    padding-top: 0;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include breakpoint( 360px ) { margin-top: 18vw; padding-bottom: 15vw; }
+  @include breakpoint( 420px ) { margin-top: 20vw; padding-bottom: 26vw; }
+  @include breakpoint( 460px ) { margin-top: 20vw; padding-bottom: 35vw; }
+  @include breakpoint( 480px ) { margin-top: 20vw; padding-bottom: 40vw; }
+  @include breakpoint( 520px ) { margin-top: 20vw; padding-bottom: 48vw; }
+  @include breakpoint( $tabl1 ) { margin-top: auto; padding-bottom: 30vw; }
+  @include breakpoint( $tabl3b ) {
+    margin-top: 10vw;
+    padding-bottom: 5vw;
+    &.benefits-copy { max-width: 76%; }
+  }
+  @include breakpoint( $tabl4 ) {
+    margin-top: 9vw;
+    padding-bottom: 10vw;
+    &.benefits-copy { p { max-width: none; } }
+  }
+  @include breakpoint( $tabl4b ) { padding-bottom: 13vw; }
+  @include breakpoint( $desk0 ) { padding-bottom: 16vw; }
+  @include breakpoint($desk1) {
+    margin-top: 10vw;
+    padding-bottom: 12vw;
+    h3 { max-width: none; }
+    &.benefits-copy { p { max-width: 65%; } }
+  }
+  @include breakpoint( 1180px  ) { padding-bottom: 15vw; }
+  @include breakpoint( $desk1b ) { margin-top: 10vw; padding-bottom: 13vw; }
+  @include breakpoint( $desk1c ) { padding-bottom: 16vw; }
+  @include breakpoint( $desk2b ) { margin-top: 13vw; padding-bottom: 19vw; }
+  @include breakpoint( $desk3  ) { margin-top: 13vw; padding-bottom: 13vw; }
+  @include breakpoint( $desk3b ) { padding-bottom: 18vw; }
+  @include breakpoint( $desk5  ) { margin-top: 17vw; }
+  @include breakpoint( $desk8  ) { margin-top: 24vw; }
+}
+
+
+
+
+
+
+
+// CHARTS
+.benefits__commercially-attractive {
+
+  margin-bottom: 6rem;
+  padding-bottom: 20vw;
+
+  background: transparent url('../img/benefits-charts.svg') center bottom no-repeat;
+  background-size: 100% auto;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  @include breakpoint( $desk1 ) {
+    margin-bottom: 9rem;
+    padding-bottom: 200px;
+    //padding-bottom: 13vw;
+
+  }
+
+}
+
+
+
+
+
+
+
+.benefits__passengers--title {
+  @include h2;
+}
+.benefits-copy .passengers__intro {
+  @include h3;
+}
+
+
+.passenger-stats__featured--stats {
+  text-align: center;
+  img {
+    width: 61%;
+    margin-bottom: 10px;
+  }
+  @include breakpoint( $tabl5 ) {
+    display: inline-block;
+    width: 33%;
+    margin-right: 4%;
+    img {
+      width: 100%;
+    }
+  }
+}
+.passenger-stats__featured {
+  //TODO
+  margin: 0 auto;
+  padding-bottom: 30px;
+  border-bottom: 1px dotted #AAAAAA;
+  margin-bottom: 30px;
+  @include breakpoint( $tabl5 ) {
+    max-width: 73%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+.passenger-stats__subtext {
+  @include copy;
+  color: $copycolor;
+  width: 100%;
+  text-align: center;
+}
+.passenger-stats__featured--description {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  margin-right: 10px;
+  p {
+    @include copy;
+    max-width: none;
+    color: black;
+    text-align: center;
+    background: $lightblue;
+    padding: 10px;
+    @include breakpoint( $tabl5 ) {
+      width: 100%;
+      padding: 25px 35px 35px 35px;
+      text-align: left;
+    }
+  }
+  @include breakpoint( $tabl5 ) {
+    margin: 0;
+    width: 62%;
+  }
+}
+.passenger-stats__grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding-top: 10px;
+  margin: 0 auto;
+  margin-bottom: 28px;
+  margin-left: 10px;
+  margin-right: 10px;
+  @include breakpoint( $tabl5 ) {
+    max-width: 73%;
+    margin: 0 auto;
+    margin-bottom: 28px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+  }
+}
+.passenger-stats__grid--border {
+  border-bottom: 1px dotted #AAAAAA;
+}
+.stat-wrapper {
+  //width: 26.8%;
+  flex-basis: 48%;
+  text-align: center;
+  img {
+    width: 98%;
+    margin-bottom: 10px;
+  }
+  .passenger-stats__subtext {
+    @include copy;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-bottom: 2.6em;
+  }
+  @include breakpoint( $tabl5 ) {
+    flex-basis: 26.8%;
+  }
+}
+
+.passenger-stats__footnote {
+  text-align: center;
+  max-width: 94%;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 9rem;
+  .footnote {
+    color: $copycolor;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+  .button {
+    margin-top: 2.5rem;
+    .icon { max-height: none; }
+  }
+  @include breakpoint( $desk1 ) {
+    max-width: 54%;
+  }
+}
+

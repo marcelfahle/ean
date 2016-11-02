@@ -1,0 +1,168 @@
+@import '~breakpoint-sass/stylesheets/breakpoint';
+@import '_variables';
+
+.contact-cta {
+  text-align: center;
+  background: $lightblue;
+  padding: 50px 0 68px 0;
+  p {
+    font-size: 2rem;
+    line-height: 1.2em;
+    margin-bottom: 1.2em;
+  }
+  @include breakpoint( $tabl4 ) {
+    p {
+      font-size: 3rem;
+      margin-bottom: 2.5rem;
+    }
+
+  }
+  @include breakpoint( $desk1) {
+    padding: 50px 0 68px 0;
+    p {
+      font-size: 4rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+  .button img { max-height: none; }
+}
+
+
+.contact-info {
+  position: relative;
+  background: $blue;
+  color: white;
+  padding-top: 5rem;
+  @include breakpoint( $tabl4 ) {
+    padding-top: 8rem;
+  }
+}
+.contact-info__meta {
+  max-width: calc(100% - 20px);
+  margin: 0 auto;
+  @include breakpoint( $tabl4 ) {
+    max-width: calc(100% - 20px);
+  }
+  @include breakpoint( $desk1 ) {
+    max-width: 73%;
+  }
+}
+.contact-info__meta-links {
+  padding-top: 3.5rem;
+  padding-bottom: 120px;
+  border-top: 1px solid white;
+  @include breakpoint( $tabl4 ) {
+    display: flex;
+    padding-bottom: 1.5rem;
+    padding-bottom: 3.5rem;
+  }
+  li {
+    flex: 1;
+    font-size: 1.5rem;
+    line-height: 1.46em;
+    text-align: center;
+
+    margin-bottom: 1.2em;
+    @include breakpoint( $tabl4 ) {
+      margin-bottom: 0;
+      font-size: 1.3rem;
+    }
+    @include breakpoint( $desk1 ) {
+      font-size: 1.5rem;
+      line-height: 1.46em;
+    }
+    //width: 17.4%;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover, &:active { text-decoration: underline; }
+  }
+  @include breakpoint( $tabl4 ) {
+    &:first-child {
+      text-align: left;
+    }
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
+.contact-info__meta-links
+.contact-info__meta-links--copyright {
+  flex: 3;
+  @include breakpoint( $tabl4 ) {
+    text-align: right;
+  }
+
+}
+
+.contact-info__details {
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  @include breakpoint( $tabl4 ) {
+    display: flex;
+    max-width: calc(100% - 20px);
+    margin-bottom: 8rem;
+  }
+  @include breakpoint( $desk1 ) {
+    max-width: 73%;
+  }
+}
+.contact-info__logos,
+.contact-info__inmarsat,
+.contact-info__telekom {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  text-align: center;
+  strong { font-size: 1.8rem; line-height: 2.4rem; font-weight: 800; }
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover, &:active {
+      text-decoration: underline;
+    }
+  }
+  @include breakpoint( $tabl4 ) {
+    width: 33%;
+    font-size: 1.5rem;
+    text-align: left;
+    strong { font-size: 1.7rem; line-height: 2.4rem; font-weight: 800; }
+  }
+  @include breakpoint( $desk1 ) {
+    width: 33%;
+    font-size: 1.8rem;
+    text-align: left;
+    strong { font-size: 2rem; line-height: 2.4rem; font-weight: 800; }
+
+  }
+}
+
+.contact-info__inmarsat {
+  margin-bottom: 4rem;
+  @include breakpoint( $tabl4 ) {
+    margin-bottom: 0;
+  } 
+}
+.contact-info__logos {
+  position: absolute;
+  left: 50%;
+  margin-left: -65px;
+  bottom: 50px;
+  img {
+    height: 43px;
+  }
+  @include breakpoint( $tabl4 ) {
+    position: relative;
+    margin-left: 0;
+    left: 0;
+    bottom: auto;
+    img { height: 50px; }
+  }
+  @include breakpoint( $desk1 ) {
+    img { height: 61px; }
+  }
+}
+
+
+
+
