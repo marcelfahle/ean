@@ -29,6 +29,8 @@ export default class HowItWorks extends React.Component {
             <p className="howitworks-components__intro--copy">
               EAN consists of two main components, the MSS satellite component from Inmarsat which covers Europe and the surrounding oceanic regions, and the complementary ground component of Deutsche Telekom, which provides the required capacity in areas with extensive air traffic.
             </p>
+            <img className="howitworks-components__diagram--mobile" src="./img/howitworks-components-mobile.png" alt="Powering Europe’s aviation connectivity" />
+          <img className="howitworks-components__diagram--desktop" src="./img/howitworks-components2.png" alt="Powering Europe’s aviation connectivity" />
           </section>
 
           <section className="howitworks-components__annotations">
@@ -89,7 +91,11 @@ export default class HowItWorks extends React.Component {
         </article>
 
         <article id="ean-aircraft-components" className="howitworks-aircraft-components">
+          <h3 className="howitworks-aircraft-components__intro--title">
+            EAN aircraft components – light, small and low maintenance
+          </h3>
 
+          <img className="hac-intro-img-mobile" src="./img/howitworks-aircraft-components-mobile.png" alt="" />
           <section className="howitworks-aircraft-components__benefits">
             <p className="hac-benefits__intro">
               Tapping into the EAN requires only moderate adjustments to airfleets, thanks to lightweight, low cost hardware extensions which fit in all regional airframes.
@@ -116,9 +122,7 @@ export default class HowItWorks extends React.Component {
                   Antenna has no moving parts - high MTBF provides a service with superior availability.
                 </p>
               </div>
-            </div>
-            {/* ROW 2 */}
-            <div className="hac-benefits__row">
+
               {/* 4 */}
               <div className="hac-benefits__item">
                 <img src="./img/hac-benefits4.png" alt="Quick turn repairs minimize opportunity costs (aircraft back in service more quickly)." />

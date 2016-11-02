@@ -129,7 +129,7 @@ export default class App extends React.Component {
             isMenu={ this.state.isMenu } 
             />
 
-          <CustomMatch exactly pattern="/" component={ Newsroom }/>
+          <CustomMatch exactly pattern="/" component={ Home }/>
           <CustomMatch pattern="/benefits" component={ Benefits } />
           <CustomMatch pattern="/how-it-works" component={HowItWorks} />
           <CustomMatch pattern="/innovation-and-partnership" component={ Innovation } />
