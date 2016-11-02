@@ -4,6 +4,9 @@ import ReadmoreParagraph from './ReadmoreParagraph.jsx';
 
 import './styles/Innovation.scss';
 
+import InmarsatMobile from './img/partner-header-inmarsat.png';
+import TelekomMobile from './img/partner-header-telekom.png';
+
 export default class Innovation extends React.Component {
   constructor( props ) {
     super ( props );
@@ -14,7 +17,8 @@ export default class Innovation extends React.Component {
       <main>
         <div className="innovation">
           <section id="world-leading-innovation-for-europe" className="innovation__intro">
-            <img src="./img/innovation-header.jpg" className="innovation__intro--header" alt="Innovation & Partnership"/>
+            <img src="./img/innovation-header-mobile.png" className="innovation__intro--header innovation__intro--header-mobile" alt="Innovation & Partnership"/>
+            <img src="./img/innovation-header.jpg" className="innovation__intro--header innovation__intro--header-desk" alt="Innovation & Partnership"/>
 
             <div className="innovation__intro--content">
               
@@ -49,7 +53,9 @@ export default class Innovation extends React.Component {
 
             <div className="partner__wrapper">
               <div className="partner__col partner__inmarsat">
+
                 <ReadmoreParagraph
+                  mobileImage={InmarsatMobile}
                   intro="Over 25 years of aviation experience Provides marketleading satcom solutions to more than 11,500  aircraft worldwide"
                   copy="Inmarsat is the leading provider of global mobile satellite communications services. Since 1979, it has been providing reliable voice and high-speed data communications to governments, enterprises and other organisations, with a range of services that can be used in the air, on land or at sea.<br/><br/>It launched EAN as the world’s first integrated satellite and air-to-ground network dedicated to providing a true in-flight broadband experience for Europe’s aviation industry and for millions of passengers who have been cut-off from fast, reliable and consistent broadband access during their flights.<br/><br/>Inmarsat's S-band satellite for EAN has been custom-designed to provide mobile satellite services (MSS) to aircraft flying over the dense European routes, exploiting Inmarsat’s 30MHz (2 x 15MHz) S-band spectrum allocation in all 28 EU member states, plus Norway and Switzerland.<br/><br/>It will be integrated with a LTE-based ground network covering approximately 300 sites, operated by Inmarsat’s partner Deutsche Telekom. Aircraft will switch automatically between satellite and terrestrial connectivity using an on–board network communicator for optimal service delivery."
                   linkURL="http://inmarsat.com"
@@ -59,6 +65,7 @@ export default class Innovation extends React.Component {
               </div>
               <div className="partner__col partner__telekom">
                 <ReadmoreParagraph 
+                  mobileImage={TelekomMobile}
                   intro="One of the world’s leading integrated telecommunications companies with around 156 million mobile customers, 29 million landlines and over 18 million broadband lines."
                   copy="With the development of the European Aviation Network, Deutsche Telekom (DT) is the first telecommunications operator to take the advantages of LTE technology to European airspace. The new, powerful, mobile broadband network of about 300 LTE sites will be rolled out across multiple countries in parallel, supported by Deutsche Telekom's national companies and local T-Systems business units. Benefiting from DT’s broad international footprint and many years of experience in international and cross-functional cooperation across the Group, its technology leadership provides the solid foundation for the best customer experience possible."
                   linkURL="http://telekom.com"

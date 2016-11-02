@@ -21,6 +21,8 @@ export default class ReadmoreParagraph extends React.Component {
   render() {
     return( 
       <div className="partner__readmore--wrapper">
+        <img src={this.props.mobileImage} className="partner__header--single" alt={this.props.intro} />
+
         <h4 className="partner__intro">{ this.props.intro }</h4>
 
         <p className={ (this.state.showCopy)? "partner__copy open" : "partner__copy" } dangerouslySetInnerHTML={ this.markup(this.props.copy) }></p>
