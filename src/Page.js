@@ -22,6 +22,7 @@ export default class Page extends Component {
 
   scrollToTarget() {
     const el = document.getElementById( location.hash.substring(1) );
+    window.scroll(0, 0);
     if (el) {
       setTimeout( () => {
         scroll.scrollTo( el.offsetTop - 94);

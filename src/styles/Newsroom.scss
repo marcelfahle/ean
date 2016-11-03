@@ -43,10 +43,10 @@
 }
 .newsroom__item--date {
   @include copy;
+  color: $lightblue-text;
   margin: 0;
   margin-bottom: 6px;
   @include breakpoint( $tabl4 ) {
-    color: $lightblue-text;
     margin-bottom: 6px;
   }
 }
@@ -63,10 +63,7 @@
 }
 .newsroom__item--link {
   a {
-    color: black;
-    @include breakpoint( $tabl4 ) {
-      color: $lightblue-text;
-    }
+    color: $lightblue-text;
     text-decoration: none;
     &:hover, &:active {
       text-decoration: underline;

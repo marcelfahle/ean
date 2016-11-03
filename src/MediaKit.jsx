@@ -19,20 +19,14 @@ export default class MediaKit extends React.Component {
     var videoDialogStyles = {
       backgroundColor: '#000000',
       color: '#ffffff',
-      width: '800px',
-      height: '434px',
+      width: '100%',
       textAlign: 'center',
-      marginLeft: '-400px',
-      marginTop: '-217px',
+      marginLeft: '-50%',
+      padding: '20px 0', 
     }
     var telekomVideoDialogStyles = {
       backgroundColor: '#000000',
       color: '#ffffff',
-      width: '800px',
-      height: '720px',
-      textAlign: 'center',
-      marginLeft: '-400px',
-      marginTop: '-360px'
     }
 
     return(
@@ -109,28 +103,28 @@ export default class MediaKit extends React.Component {
           hideOnOverlayClicked 
           dialogStyles={telekomVideoDialogStyles} 
           ref="vid1">
-          <iframe width="790" height="700" src="http://tv.telekom.com/index.php/lang/en_US/video/10392/aviation-network" frameBorder="0" scrolling="no" allowFullScreen></iframe>
+          <iframe width="100%" height="100%" src="http://tv.telekom.com/index.php/lang/en_US/video/10392/aviation-network" frameBorder="0" scrolling="no" allowFullScreen></iframe>
         </SkyLight>
 
         <SkyLight 
           hideOnOverlayClicked 
           dialogStyles={telekomVideoDialogStyles} 
           ref="vid2">
-          <iframe width="790" height="700" src="http://tv.telekom.com/index.php/lang/en_US/video/10357/internet-access" frameBorder="0" scrolling="no" allowFullScreen></iframe>
+          <iframe width="100%" height="100%" src="http://tv.telekom.com/index.php/lang/en_US/video/10357/internet-access" frameBorder="0" scrolling="no" allowFullScreen></iframe>
         </SkyLight>
 
         <SkyLight 
           hideOnOverlayClicked 
           dialogStyles={videoDialogStyles} 
           ref="vid3">
-          <iframe width="768" height="432" src="//embed.wirewax.com/8040845/" frameBorder="0" scrolling="no" allowFullScreen></iframe>
+          <iframe width="100%" height="100%" src="//embed.wirewax.com/8040845/" frameBorder="0" scrolling="no" allowFullScreen></iframe>
         </SkyLight>
 
         <SkyLight 
           hideOnOverlayClicked 
           dialogStyles={videoDialogStyles} 
           ref="vid4">
-          <iframe width="768" height="432" src="https://www.youtube.com/embed/uxUk9u_Ewws" frameBorder="0" allowFullScreen></iframe>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/uxUk9u_Ewws" frameBorder="0" allowFullScreen></iframe>
         </SkyLight>
 
 
