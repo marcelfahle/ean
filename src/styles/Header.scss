@@ -169,14 +169,15 @@ header.menu #main-menu {
   //bottom: 40px;
   margin-left: calc(50% - 75px);
   margin-top: -30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   @include breakpoint( $tabl2 ) {
-    margin-top: 50px;
+    margin-top: 10px;
   }
 }
 .main-menu__items {
   text-align: center;
-  min-height: 600px;
+  //min-height: 600px;
+  padding-bottom: 20px;
 }
 .main-menu__item {
   margin-bottom: 2em;
