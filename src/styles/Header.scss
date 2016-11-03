@@ -102,9 +102,17 @@
 
 .site-header__nav--button{
   transition: all .1s ease-in-out;
-  width: 3.2rem;
+  //width: 3.2rem;
   overflow: hidden;
-  padding-right: 0;
+  //padding-right: 0;
+
+  width: 2rem;
+  padding-right: 0.6em;
+  font-size: 2rem;
+  padding-left: 0rem;
+  position: relative;
+
+
   .icon {
     width: 1.8rem;
     margin-left: 7px;
@@ -112,12 +120,22 @@
   }
   @include breakpoint( $tabl4 ) {
     width: auto;
-    padding-right: 10px;
     font-size: 1.6rem;
+    padding-left: 0.6rem;
     .icon { vertical-align: middle; }
   }
   @include breakpoint( $tabl5 ) {
-    .icon { vertical-align: sub; }
+    padding-left: 5.8rem;
+    padding-right: 1.6em;
+    .icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0.7em;
+      max-height: none;
+      /* height: 44px; */
+      transform: translateY(-50%) scale(1.5);
+    }
   }
 
 }
