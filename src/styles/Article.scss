@@ -2,15 +2,18 @@
 @import '_variables';
 
 .article {
-  width: 62.5%;
-  margin: 0 auto;
-  padding-top: 6.6rem;
-  padding-bottom: 6.6rem;
-
+  margin: 0 10px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  @include breakpoint( $tabl4 ) {
+    width: 62.5%;
+    margin: 0 auto;
+    padding-top: 6.6rem;
+    padding-bottom: 6.6rem;
+  }
 }
 .article p, .article li {
-  font-size: 2rem;
-  line-height: 1.5;
+  @include copy;
   color: black;
   margin-bottom: 1.5em;
   a:link, a:visited {
@@ -49,22 +52,18 @@ figcaption {
   margin-bottom: 8px;
 }
 .article__title {
-  font-size: 4rem;
-  line-height: 1.333;
-  font-weight: 800;
+  @include h2;
   margin: 0;
   margin-bottom: 10px;
 }
 p.article__intro {
   //color: $blue;
+  @include h3;
   color: $copycolor;
-  font-size: 3rem;
-  line-height: 1.333;
   margin-bottom: 0.9em;
 }
 .article h3 {
-  font-size: 3rem;
-  line-height: 1.333;
+  @include h3;
   padding-top: 1em;
 }
 .article ul {

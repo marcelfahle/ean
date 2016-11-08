@@ -48,6 +48,7 @@ if (production) {
       __DEVELOPMENT__: !production,
       __DEVTOOLS__:    !production,
       'process.env':   {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
         BABEL_ENV: JSON.stringify(process.env.NODE_ENV),
       },
     }),
@@ -57,7 +58,7 @@ if (production) {
 module.exports = {
   debug:   !production,
   devtool: production ? false : 'eval',
-  entry: './src',
+  entry: ['babel-polyfill', './src'],
   output: {
     path: path.join(__dirname, '/dist/'),
     filename: '[name].js',
@@ -71,7 +72,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         loader: 'babel',
         include: __dirname + '/src'
       },
@@ -90,7 +91,7 @@ module.exports = {
       },
       {
         test:   /\.scss/,
-        loader: 'style!css!sass',
+        loader: 'style!css!postcss!sass',
       },
       { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
       { test: /\.(ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }

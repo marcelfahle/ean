@@ -142,7 +142,7 @@
 
 
 .sticky .site-header {
-  @include breakpoint( $tabl3 ) {
+  @include breakpoint( $tabl5 ) {
     padding: 12px 10px;
     width: calc(100% - 20px);
     .site-header__logos img {
@@ -160,6 +160,10 @@
     }
     .site-header__nav--button {
       font-size: 1.2rem;
+      .icon {
+        transform: translateY(-50%) scale(1.2);
+
+      }
     }
     .button {
       height: 3rem;

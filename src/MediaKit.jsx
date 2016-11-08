@@ -10,7 +10,7 @@ export default class MediaKit extends React.Component {
 
   openVideo( ref, e ) {
     e.preventDefault();
-    console.log('open', ref, e);
+    //console.log('open', ref, e);
     ref.show()
   }
 
@@ -103,14 +103,14 @@ export default class MediaKit extends React.Component {
           hideOnOverlayClicked 
           dialogStyles={telekomVideoDialogStyles} 
           ref="vid1">
-          <iframe width="100%" height="100%" src="http://tv.telekom.com/index.php/lang/en_US/video/10392/aviation-network" frameBorder="0" scrolling="no" allowFullScreen></iframe>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/GPzC8J0WIuo" frameBorder="0" scrolling="no" allowFullScreen></iframe>
         </SkyLight>
 
         <SkyLight 
           hideOnOverlayClicked 
-          dialogStyles={telekomVideoDialogStyles} 
+          dialogStyles={videoDialogStyles} 
           ref="vid2">
-          <iframe width="100%" height="100%" src="http://tv.telekom.com/index.php/lang/en_US/video/10357/internet-access" frameBorder="0" scrolling="no" allowFullScreen></iframe>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/pkg9pvEhF0I" frameBorder="0" scrolling="no" allowFullScreen></iframe>
         </SkyLight>
 
         <SkyLight 

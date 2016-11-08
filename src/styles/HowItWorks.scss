@@ -82,7 +82,7 @@
   background: #fff;
   width: calc(100% - 40px);
   margin: 0 auto;
-  margin-top: -11%;
+  margin-top: -12%;
   //left: 50%;
   //margin-left: calc(-40%);
   padding: 20px 10px 20px 10px; 
@@ -91,6 +91,7 @@
   //padding: 6px 0 0 25px;
   font-size: 1.8rem;
   line-height: 1.5;
+  z-index: 20;
 
   @include breakpoint($tabl5) {
     max-width: 80%;
@@ -198,12 +199,13 @@
   //background: #c9d4db url('../img/howitworks-aircraft-components-mobile.png') top center no-repeat;
   // margin collapse
   overflow: hidden;
-  padding-bottom: 70px;
+  padding-bottom: 10px;
   background-color: #a3b0b8;
 
   @include breakpoint( $tabl3 ) {
     background: #c9d4db url('../img/howitworks-aircraft-components.png') top center no-repeat;
     background-size: 100% auto;
+    padding-bottom: 70px;
   }
 
 }
@@ -217,17 +219,19 @@
 }
 .howitworks-aircraft-components__intro--title {
   position: absolute;
-  top: 2%;
+  //top: 2%;
   @include h2;
   width: 80%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  margin-top: calc(29.5% - 60px);
+
   @include breakpoint($mob2) {
-    top: 5%;
+    margin-top: calc(29.5% - 54px);
   }
   @include breakpoint($tabl1) {
-    top: 10%;
+    margin-top: calc(29.5% - 30px);
   }
   @include breakpoint( $tabl3 ) {
     display: none;

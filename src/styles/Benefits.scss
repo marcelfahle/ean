@@ -248,6 +248,13 @@
   @include h3;
 }
 
+.passenger-stats__wrapper {
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 
 .passenger-stats__featured--stats {
   text-align: center;
@@ -285,8 +292,8 @@
 .passenger-stats__featured--description {
   display: inline-block;
   vertical-align: top;
-  margin-left: 10px;
-  margin-right: 10px;
+  //margin-left: 10px;
+  //margin-right: 10px;
   p {
     @include copy;
     max-width: none;
@@ -312,8 +319,8 @@
   padding-top: 10px;
   margin: 0 auto;
   margin-bottom: 28px;
-  margin-left: 10px;
-  margin-right: 10px;
+  //margin-left: 10px;
+  //margin-right: 10px;
   @include breakpoint( $tabl5 ) {
     max-width: 73%;
     margin: 0 auto;
