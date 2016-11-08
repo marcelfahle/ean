@@ -23,6 +23,7 @@ import Article6 from './Article6.jsx';
 import Article7 from './Article7.jsx';
 import Article8 from './Article8.jsx';
 import Article2016Oct from './Article2016Oct.jsx';
+import Article2016Nov from './Article2016Nov.jsx';
 
 import classNames from 'classnames';
 
@@ -144,6 +145,7 @@ export default class App extends React.Component {
           <CustomMatch pattern="/newsroom/european-aviation-network-terminal-manufacturer-selected" component={ Article7 } />
           <CustomMatch pattern="/newsroom/deutsche-telekom-and-inmarsat-partner-to-deliver-european-aviation-network" component={ Article8 } />
           <CustomMatch pattern="/newsroom/meet-us-at-the-wireless-global-congress-2016" component={ Article2016Oct } />
+          <CustomMatch pattern="/newsroom/european-aviation-network-welcomes-first-airline-customer" component={ Article2016Nov } />
 
           <Footer />
 

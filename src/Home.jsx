@@ -64,6 +64,22 @@ export default class Benefits extends React.Component {
 
         <article className="home-teaser-grid">
           <div className="home-teaser-grid__wrapper">
+            <Link className="home-teaser home-teaser--feature" to="/newsroom/european-aviation-network-welcomes-first-airline-customer">
+              <img src="./img/Home_Newskachel_0005.jpg" alt="European Aviation Network welcomes first airline customer" />
+              <p className="home-teaser__lower-third">
+                <span className="date">
+                  November 03, 2016
+                </span>
+                European Aviation Network welcomes first airline customer
+              </p>
+            </Link>
+            <Link className="home-teaser" to="/benefits#scalable">
+              <p className="home-teaser__full-link">
+                Scalable to meet <br/>growing demand
+              </p>
+            </Link>
+          </div>
+          <div className="home-teaser-grid__wrapper">
             <Link className="home-teaser home-teaser" to="/newsroom/meet-us-at-the-wireless-global-congress-2016">
               <img src="./img/news-1610-2.jpg" alt="Meet us at the Wireless Global Congress in San Jose, USA." />
               <p className="home-teaser__lower-third">
@@ -73,20 +89,9 @@ export default class Benefits extends React.Component {
                 Meet us at the Wireless Global Congress in San Jose, USA.
               </p>
             </Link>
-            <Link className="home-teaser home-teaser--feature" to="/newsroom/european-aviation-network-installation-of-the-first-lte-antennas-in-the-uk">
-              <img src="./img/news-1609.png" alt="EAN – Installation of the first LTE antennas in the UK" />
-              <p className="home-teaser__lower-third">
-                <span className="date">
-                  September 22, 2016
-                </span>
-                EAN – Installation of the first LTE antennas in the UK
-              </p>
-            </Link>
-          </div>
-          <div className="home-teaser-grid__wrapper">
-            <Link className="home-teaser" to="/benefits#scalable">
+            <Link className="home-teaser" to="/benefits#low-total-cost">
               <p className="home-teaser__full-link">
-                Scalable to meet <br/>growing demand
+                Low total cost<br/> of operation
               </p>
             </Link>
             <Link className="home-teaser home-teaser" to="/newsroom/satellite-constructed-on-schedule-for-inmarsats-ground-breaking-european-aviation-network">
@@ -96,11 +101,6 @@ export default class Benefits extends React.Component {
                   July 12, 2016
                 </span>
                 Satellite constructed on schedule for Inmarsat’s ‘ground-breaking’ EAN
-              </p>
-            </Link>
-            <Link className="home-teaser" to="/benefits#low-total-cost">
-              <p className="home-teaser__full-link">
-                Low total cost<br/> of operation
               </p>
             </Link>
 

@@ -169,11 +169,11 @@
     transform: translateX(-50%);
   }
   @include breakpoint($tabl3) {
-    width: calc(67% - 14px);
+    width: calc(66% + 20px);
     &:before {
       content: "";
       display: block;
-      padding-top: 50%;
+      padding-top: calc(50% - 10px);
       float: left;
     }
   }
