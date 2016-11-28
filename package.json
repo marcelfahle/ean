@@ -41,6 +41,7 @@
   "dependencies": {
     "babel-plugin-transform-react-jsx-img-import": "^0.1.2",
     "babel-register": "^6.16.3",
+    "react-image-lightbox": "^3.3.0",
     "react-router": "next",
     "react-skylight": "^0.4.1",
     "webpack-dev-server": "^1.16.2"

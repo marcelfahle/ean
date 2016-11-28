@@ -1,12 +1,46 @@
 import React from 'react';
 import SkyLight from 'react-skylight';
+import Lightbox from 'react-image-lightbox';
+
+const images = [
+  './gallery/EAN-Antenna-of-the-terminal-equipment.jpg',
+  './gallery/EAN-Antenna-Site-above-Stuttgart.jpg',
+  './gallery/EAN-On-board-equipment-in-the-test-lab.jpg',
+  './gallery/EAN-on-board-equipment.jpg',
+  './gallery/EAN-Radio-heads-of-the-LTE-groundnetwork.jpg',
+  './gallery/EAN-Team-working-on-test-flights.jpg',
+  './gallery/EAN-Test-Aircraft.jpg',
+  './gallery/EAN-Test-Lab-in-Stuttgart.jpg'
+];
+
+const titles = [
+  'EAN antenna of the terminal equipment mounted on the hull of the aircraft',
+  'One of the EAN antenna sites above Stuttgart',
+  'EAN On Board Equipment in the Test Lab',
+  'EAN On Board Equipment',
+  'EAN Radio Heads of the LTE Groundnetwork',
+  'EAN Team working on the test flight program',
+  'Taking off: EAN Test Aicraft',
+  'EAN Test lab in Stuttgart'
+];
+
+
 
 
 export default class MediaKit extends React.Component {
   constructor( props ) {
     super( props );
+    this.state = {
+      photoIndex: 0,
+      isOpen: false
+    };
   }
 
+
+  openLightboxGallery( e ) {
+    e.preventDefault();
+    this.setState({isOpen: true});
+  }
 
   openVideo( ref, e ) {
     e.preventDefault();
@@ -16,7 +50,7 @@ export default class MediaKit extends React.Component {
 
   render() {
 
-    var videoDialogStyles = {
+    const videoDialogStyles = {
       backgroundColor: '#000000',
       color: '#ffffff',
       width: '100%',
@@ -24,10 +58,14 @@ export default class MediaKit extends React.Component {
       marginLeft: '-50%',
       padding: '20px 0', 
     }
-    var telekomVideoDialogStyles = {
+    const telekomVideoDialogStyles = {
       backgroundColor: '#000000',
       color: '#ffffff',
     }
+    const {
+      photoIndex,
+      isOpen,
+    } = this.state;
 
     return(
       <div>
@@ -90,6 +128,12 @@ export default class MediaKit extends React.Component {
             </div>
             {/* ITEM 6 */}
             <div className="mediakit__item">
+              <a href="#" onClick={(e) => this.openLightboxGallery(e)} className="mediakit__item--link">
+                <h3 className="mediakit__item--title">
+                  EAN First Testflight
+                </h3>
+                <img src="./img/icon-big-photo.svg" alt="EAN First Testflight" />
+              </a>
             </div>
         
           </div>
@@ -126,6 +170,23 @@ export default class MediaKit extends React.Component {
           ref="vid4">
           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/uxUk9u_Ewws" frameBorder="0" allowFullScreen></iframe>
         </SkyLight>
+
+        {isOpen &&
+          <Lightbox
+          mainSrc={images[photoIndex]}
+          nextSrc={images[(photoIndex + 1) % images.length]}
+          prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+
+          onCloseRequest={() => this.setState({ isOpen: false })}
+          onMovePrevRequest={() => this.setState({
+            photoIndex: (photoIndex + images.length - 1) % images.length,
+          })}
+          onMoveNextRequest={() => this.setState({
+            photoIndex: (photoIndex + 1) % images.length,
+          })}
+          imageCaption={titles[photoIndex]}
+            />
+        }
 
 
       </div>

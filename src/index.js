@@ -24,6 +24,7 @@ import Article7 from './Article7.jsx';
 import Article8 from './Article8.jsx';
 import Article2016Oct from './Article2016Oct.jsx';
 import Article2016Nov from './Article2016Nov.jsx';
+import Article2016Nov2 from './Article2016Nov2.jsx';
 
 import classNames from 'classnames';
 
@@ -105,14 +106,14 @@ export default class App extends React.Component {
       isSticky = sticky;
       const wrap = document.getElementsByClassName('site-wrap')[0];
       wrap.classList.toggle( 'sticky' );
-      console.log('ok, action', wrap.classList);
+      //console.log('ok, action', wrap.classList);
 
     }
 
   }
 
   render() {
-    console.log('isSticky', isSticky);
+    //console.log('isSticky', isSticky);
     const wrapperClass = classNames({
       'site-wrap': true,
       'menu': this.state.isMenu,
@@ -146,6 +147,7 @@ export default class App extends React.Component {
           <CustomMatch pattern="/newsroom/deutsche-telekom-and-inmarsat-partner-to-deliver-european-aviation-network" component={ Article8 } />
           <CustomMatch pattern="/newsroom/meet-us-at-the-wireless-global-congress-2016" component={ Article2016Oct } />
           <CustomMatch pattern="/newsroom/european-aviation-network-welcomes-first-airline-customer" component={ Article2016Nov } />
+          <CustomMatch pattern="/newsroom/european-aviation-network-ean-is-airborne" component={ Article2016Nov2 } />
 
           <Footer />
 

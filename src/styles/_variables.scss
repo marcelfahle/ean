@@ -49,19 +49,37 @@ $desk8: 2560px;
   }
 }
 
+@mixin h2light {
+  color: $blue;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 400;
+  @include breakpoint( $tabl2 ) {
+    font-size: 2.4rem;
+  }
+  @include breakpoint( $tabl5 ) {
+    font-size: 3.2rem;
+    font-weight: 400;
+  }
+  @include breakpoint( $desk1 ) {
+    font-size: 4rem;
+    font-weight: 400;
+  }
+
+}
 @mixin h2 {
   color: $blue;
-  font-size: 2.6rem;
+  font-size: 2rem;
   line-height: 1.2;
   font-weight: 800;
   @include breakpoint( $tabl2 ) {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
-  @include breakpoint( $desk1 ) {
-    font-size: 3.4rem;
+  @include breakpoint( $tabl5 ) {
+    font-size: 3.2rem;
     font-weight: 800;
   }
-  @include breakpoint( $desk1b ) {
+  @include breakpoint( $desk1 ) {
     font-size: 4rem;
     font-weight: 800;
   }
@@ -79,11 +97,11 @@ $desk8: 2560px;
     margin-bottom: 0.6em;
   }
 
-  @include breakpoint( $desk1 ) {
-    font-size: 3.4rem;
+  @include breakpoint( $tabl5 ) {
+    font-size: 2.8rem;
   }
-  @include breakpoint( $desk1b ) {
-    font-size: 4rem;
+  @include breakpoint( $desk1 ) {
+    font-size: 3rem;
   }
 
 }
@@ -95,9 +113,8 @@ $desk8: 2560px;
   @include breakpoint( $tabl1 ) {
     font-size: 1.8rem;
   }
-  @include breakpoint( $desk1b ) {
+  @include breakpoint( $desk1 ) {
     font-size: 2rem;
-    line-height: 1.4;
   }
 }
 
