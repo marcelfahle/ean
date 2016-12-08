@@ -19,6 +19,15 @@ export default class Newsroom extends React.Component {
           
             <h2 className="newsroom__title">Newsroom</h2>
 
+            <article className="newsroom__item">
+              <p className="newsroom__item--date">December 08, 2016</p>
+              <h3 className="newsroom__item--title">
+                <Link to="/newsroom/inmarsat-signs-contract-to-launch-european-aviation-network-satellite-with-arianespace">Inmarsat signs contract to launch European Aviation Network satellite with Arianespace</Link>
+              </h3>
+              <p className="newsroom__item--link">
+                <Link to="/newsroom/inmarsat-signs-contract-to-launch-european-aviation-network-satellite-with-arianespace">Read more</Link>
+              </p>
+            </article>
 
 
             <article className="newsroom__item">

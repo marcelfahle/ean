@@ -65,6 +65,15 @@ export default class Benefits extends React.Component {
         <article className="home-teaser-grid">
           <div className="home-teaser-grid__wrapper">
 
+            <Link className="home-teaser" to="/newsroom/inmarsat-signs-contract-to-launch-european-aviation-network-satellite-with-arianespace">
+              <img src="./img/Home_Newskachel_0007@2x.jpg" alt="Inmarsat signs contract to launch European Aviation Network satellite with Arianespace" />
+              <p className="home-teaser__lower-third">
+                <span className="date">
+                  December 08, 2016
+                </span>
+                Inmarsat signs contract to launch EAN satellite with Arianespace
+              </p>
+            </Link>
             <Link className="home-teaser home-teaser--feature" to="/newsroom/european-aviation-network-ean-is-airborne">
               <img src="./img/Newskachel_0006@2x.jpg" alt="European Aviation Network welcomes first airline customer" />
               <p className="home-teaser__lower-third">
@@ -76,11 +85,6 @@ export default class Benefits extends React.Component {
             </Link>
 
 
-            <Link className="home-teaser" to="/benefits#scalable">
-              <p className="home-teaser__full-link">
-                Scalable to meet <br/>growing demand
-              </p>
-            </Link>
           </div>
 
 
@@ -90,13 +94,18 @@ export default class Benefits extends React.Component {
                 Low total cost<br/> of operation
               </p>
             </Link>
-            <Link className="home-teaser home-teaser--feature" to="/newsroom/european-aviation-network-welcomes-first-airline-customer">
-              <img src="./img/Home_Newskachel_0005.jpg" alt="European Aviation Network welcomes first airline customer" />
+            <Link className="home-teaser" to="/newsroom/european-aviation-network-welcomes-first-airline-customer">
+              <img src="./img/Home_Newskachel_0005b@2x.jpg" alt="European Aviation Network welcomes first airline customer" />
               <p className="home-teaser__lower-third">
                 <span className="date">
-                  November 03, 2016
+                  November 04, 2016
                 </span>
-                European Aviation Network welcomes first airline customer
+                EAN welcomes first airline customer
+              </p>
+            </Link>
+            <Link className="home-teaser" to="/benefits#scalable">
+              <p className="home-teaser__full-link">
+                Scalable to meet <br/>growing demand
               </p>
             </Link>
 

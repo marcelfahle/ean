@@ -25,6 +25,7 @@ import Article8 from './Article8.jsx';
 import Article2016Oct from './Article2016Oct.jsx';
 import Article2016Nov from './Article2016Nov.jsx';
 import Article2016Nov2 from './Article2016Nov2.jsx';
+import Article2016Dec from './Article2016Dec.jsx';
 
 import classNames from 'classnames';
 
@@ -148,6 +149,7 @@ export default class App extends React.Component {
           <CustomMatch pattern="/newsroom/meet-us-at-the-wireless-global-congress-2016" component={ Article2016Oct } />
           <CustomMatch pattern="/newsroom/european-aviation-network-welcomes-first-airline-customer" component={ Article2016Nov } />
           <CustomMatch pattern="/newsroom/european-aviation-network-ean-is-airborne" component={ Article2016Nov2 } />
+          <CustomMatch pattern="/newsroom/inmarsat-signs-contract-to-launch-european-aviation-network-satellite-with-arianespace" component={ Article2016Dec } />
 
           <Footer />
 
