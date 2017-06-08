@@ -151,7 +151,9 @@ export default class Newsroom extends React.Component {
           </section>
 
 
-          <MediaKit />
+          <section id="media-kit" className="newsroom-media">
+            <MediaKit />
+          </section>
 
 
         </div>

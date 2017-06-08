@@ -136,7 +136,7 @@ export default class App extends React.Component {
           <CustomMatch pattern="/benefits" component={ Benefits } />
           <CustomMatch pattern="/how-it-works" component={HowItWorks} />
           <CustomMatch pattern="/innovation-and-partnership" component={ Innovation } />
-          <CustomMatch exactly pattern="/newsroom" component={ Newsroom } />
+          <CustomMatch pattern="/newsroom" component={ Newsroom } />
 
           <CustomMatch pattern="/newsroom/apex-expo" component={ Article } />
           <CustomMatch pattern="/newsroom/european-aviation-network-installation-of-the-first-lte-antennas-in-the-uk" component={ Article2 } />
